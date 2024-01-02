@@ -1,0 +1,16 @@
+<div class="bod">
+    <h1 class="up"> list of studnts</h1>
+    <ul class="lis">
+        <li *ngFor="let st of s" [ngClass]="{'notActive':st.mark>98}">
+            <p>id:{{st.id}}, name:{{st.name}}, adress:{{st.adress}}, mark:{{st.mark}}</p>           
+            
+              <button (click)="deleteMe(st)" class="chan">deleteMe</button>
+              <button (click)="changMe(st)" class="chan">changMe</button>
+              <br><br> <br>                         
+        </li>
+        
+    </ul>
+    <app-srudent-details [st]="studs" [num]="num1" (onClickSave)="updatedetails($event)" ></app-srudent-details>
+    <button (click)="addStudent()" class="add">addStudent</button>
+    <app-new-student [num]="num" (onClickSave)="saveDetailsToList($event)"></app-new-student>
+</div>

@@ -1,0 +1,32 @@
+<div *ngIf="num">
+    <form [formGroup]="taskform">
+        <div>
+            <input #studid placeholder="st.id"  class="in" formControlName="id" >
+            <!-- <div>{{studid.className}}</div> -->
+            <ng-container *ngIf="taskform.controls['id'].errors">
+                <div *ngIf="taskform.controls['id'].errors['required']">it is not required</div> 
+           <div *ngIf="taskform.controls['id'].errors['maxlength']">it is too much letters</div>  
+           </ng-container>
+        </div>
+      
+        <div>
+            <input #studname  class="in" formControlName="name" >      
+            <div class="d" *ngIf="!taskform.controls['name'].valid">it is not required</div> 
+        </div>
+        <div>
+            <input #studadress  class="in" formControlName="adress" >      
+             <div *ngIf="!taskform.controls['adress'].valid">it is not required</div> 
+        </div>
+        <!-- <div>{{studname.className}} </div> -->
+        
+        <!-- <div>{{studadress.className}}</div> -->
+        <div>  <input  #studmark class="in" formControlName="mark" >
+            <ng-container *ngIf="taskform.controls['mark'].errors">
+                 <div *ngIf="taskform.controls['mark'].errors['required']">it is not required</div> 
+            <div *ngIf="taskform.controls['mark'].errors['minlength']">it must have at least 2 digits</div>  
+            </ng-container>
+            
+        </div>
+        <button  (click)="saveDetails()" class="sa" [disabled]="!taskform.valid">save</button>         
+    </form>
+</div>

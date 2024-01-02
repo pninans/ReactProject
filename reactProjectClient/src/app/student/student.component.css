@@ -1,0 +1,21 @@
+.chan{
+    background-color: bisque;
+   height: 30px;
+}
+.add{
+    background-color:bisque;
+    height: 30px;
+}
+.bod{
+    
+    text-align: center;
+}
+.lis{
+    list-style-type:none;
+}
+.up{
+    font-size:xxx-large;
+}
+.notActive{
+    background-color: aqua;
+}

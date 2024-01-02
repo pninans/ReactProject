@@ -1,0 +1,5 @@
+.caption {
+    animation-duration: 1s; /* Adjust the duration to make it slower */
+    animation-delay: 1.5s; /* Adjust the delay if needed */
+    color:blue;
+  }

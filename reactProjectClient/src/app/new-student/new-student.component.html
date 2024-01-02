@@ -1,0 +1,7 @@
+<div *ngIf="num">   
+        <input #id placeholder="id" class="in">
+        <input #name placeholder="name" class="in">
+        <input #adress placeholder="adress" class="in">
+        <input #mark placeholder="mark" class="in">
+        <button (click)="saveDetails(id.value,name.value,adress.value,mark.value)" class="sa">save</button>  
+</div>
